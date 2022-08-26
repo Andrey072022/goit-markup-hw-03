@@ -15,19 +15,29 @@
     --backgraund-color-btn:#2196F3;
     --accent-backgraund-color-btn: #188CE8;
 }
-h1, h2, h3, p {margin-top: 0;
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6, 
+p {margin-top: 0;
 margin-bottom: 0;}
 ul {margin-top: 0;
 margin-bottom: 0;
 padding-left: 0;}
 .link {
     text-decoration: none;
+    padding-left: 0;
+    margin: 0;
 }
 .list {
     list-style: none;
 }
 img 
 {display: block;
+    max-width: 100%;
+    height: auto;
 }
 button{cursor: pointer;
 font-family: inherit;
@@ -58,9 +68,11 @@ display:flex;
 align-items: center;
 height: 80px;
 border-bottom: 1px solid #ECECEC;}
+.page-heder-container .container {display: flex;
+    align-items: center;}
 
 .page-navigation{display:flex;
-justify-content: space-between;
+align-items: center;
 margin-right:auto;}
 
 .page-logo-heder{
@@ -100,15 +112,16 @@ column-gap: 50px;
 /* Навігація контакти */
 .contact-heder{display: flex;
     align-items: center;
-   
-   }
+      }
+.cotact-item-address { margin-right: 50px;}
+
 .contact-mail-address{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-dark);
     font-weight: 500;
-    margin-right: 50px;
+   
 }
 .contact-phone-number{
     font-size: 14px;
@@ -122,23 +135,23 @@ column-gap: 50px;
 }
 
 /* Слоган */
-.sec-slg-btn {
+.hero-section {
     background-color: var(--secondary-body-color);
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
     
 }
-.page-heder-slg-btn{display: flex;
+/* .page-heder-slg-btn{display: flex;
     align-items: center;
     flex-direction: column;}
-    /* text-align: center;   */
+    text-align: center;   */
 
-.slg-btn {
-width: 700px;}
+/* .slg-btn {
+width: 700px;} */
         
     
-.slogan {
+.hero-titel {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -146,30 +159,32 @@ width: 700px;}
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-text-color-light);
+    width: 696px;
+    margin: auto;
+    margin-bottom: 30px;
   }
 /* Замовити послугу */
-.modal-open-btn
+.hero-button
 {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    /* display: flex;
-    align-items: center;
-    text-align: center; */
     letter-spacing: 0.06em;
     color: var(--primary-text-color-light);
     background-color: var(--backgraund-color-btn);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    padding: 10px 32px;
     }
 
-.modal-open-btn:hover,
-.modal-open-btn:focus { background-color: var(--accent-backgraund-color-btn);}
+.hero-button:hover,
+.hero-button:focus { background-color: var(--accent-backgraund-color-btn);}
 
 /* Опис діяльності компанії */
 
 .description-list {
 display: flex;
+gap: 30px;
 }
 .visually-hidden {
   position: absolute;
@@ -198,12 +213,12 @@ display: flex;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color-dark);
+    margin-top: 10px;
 }
 
-
+.act {padding-top: 0;}
 .act-list {display: flex;
-    align-items: center; 
-    justify-content: space-between;}
+    gap: 30px;}
 .act-title{
     font-weight: 700;
     font-size: 36px;
@@ -218,7 +233,7 @@ display: flex;
 
 .team{
     background-color: var(--third-section-color);
-}
+    }
 .team-title {
 font-weight: 700;
 font-size: 36px;
@@ -227,15 +242,23 @@ text-align: center;
 margin-bottom: 50px;
 }
 .team-list {display: flex;
-    align-items: center;
-    justify-content: space-between;
+    gap: 30px;
 
 }
+
+.team-item{background: #FFFFFF;
+    /* material shadow v1 */
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;}
+    .team-item-pad {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;}
 .team-subtitle{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color:var(--primary-text-color-dark);
     margin-top: 30px;
@@ -245,19 +268,17 @@ margin-bottom: 50px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
-    text-align: center;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color-dark);
     margin-top: 10px;
 }
 /* футер */
-footer{
-    background-color: var(--secondary-body-color);
-    height: 252px;
+/* display: flex;
+flex-direction: column;  height: 252px; */
 
-}
-.footer-decorat{display: flex;
-flex-direction: column;
+.footer-decorat{ 
+background-color: var(--secondary-body-color);
+   padding: 60px 0;
 }
 
 .page-logo-footer{
@@ -268,18 +289,24 @@ flex-direction: column;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--primary-text-color-light);
-    padding-top: 60px;
+   
    
 }
-.address-footer-list {margin-top: 20px; display: flex;
-    flex-direction: column; row-gap: 9px;}
-.footer-address{
+.address-footer {  margin-top: 20px; }
+.footer-address-item {
+    margin-bottom: 9px;
+    }
+    .footer-address-item:last-child {
+        margin-bottom: 0;
+    }
+.footer-address-link{
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color-light);
+    color: var(--primary-text-color-light); 
+  
     
 }
  .footer-mail-address{
@@ -329,17 +356,17 @@ flex-direction: column;
    .portfolio-list {display: flex; flex-basis: calc((100%-60px)/3);
     column-gap: 30px; flex-wrap: wrap;
 }
-    
+    .portfolio-point{
+        padding-top: 20px; padding-bottom: 20px;
+    }
 .portfolio-subtitle{
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primary-text-color-dark);
-    margin-top: 20px; 
     margin-bottom: 4px; 
-    margin-left: 24px; 
-    margin-right: 24px;
+    
     } 
 .portfolio-text{
     font-weight: 400;
@@ -347,10 +374,6 @@ flex-direction: column;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color-dark);
-    margin-top: 4px;
-    margin-bottom: 20px;
-    margin-left: 24px;
-    margin-right: 24px;
-    }
+       }
     
    
