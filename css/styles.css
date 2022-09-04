@@ -14,6 +14,7 @@
     --accent-color:#2196F3;
     --backgraund-color-btn:#2196F3;
     --accent-backgraund-color-btn: #188CE8;
+    --border-color: #EEEEEE;
 }
 h1,
 h2, 
@@ -107,7 +108,7 @@ column-gap: 50px;
 {
     color: var(--accent-color);
 }
-.current:active { color:var(--accent-color);}
+.current { color:var(--accent-color);}
 
 /* Навігація контакти */
 .contact-heder{display: flex;
@@ -126,7 +127,9 @@ column-gap: 50px;
 .contact-phone-number{
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.02em;
     color: var(--secondary-text-color-dark);
+    font-weight: 500;
 }
 .contact-link-heder:hover,
 .contact-link-heder:focus
@@ -261,7 +264,7 @@ margin-bottom: 50px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color:var(--primary-text-color-dark);
-    margin-top: 30px;
+    
 }
 
 .team-text{
@@ -334,13 +337,15 @@ background-color: var(--secondary-body-color);
 /* Фільтр */
     .filter-list{display: flex; align-items: center;
        justify-content: center; column-gap:8px;
-       padding-bottom: 16px;
-       margin-bottom: 34px;
+       
+       margin-bottom: 50px;
     }
 .filter-button{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
+    padding: 6px 22px;
+    border-radius: 4px;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--primary-text-color-dark);
@@ -354,10 +359,12 @@ background-color: var(--secondary-body-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
    }
    .portfolio-list {display: flex; flex-basis: calc((100%-60px)/3);
-    column-gap: 30px; flex-wrap: wrap;
+    gap: 30px; flex-wrap: wrap;
 }
     .portfolio-point{
-        padding-top: 20px; padding-bottom: 20px;
+        padding: 20px 24px;
+        border: 1px solid var(--border-color);
+
     }
 .portfolio-subtitle{
     font-weight: 700;
